@@ -1,0 +1,541 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB4EABB928C751FB00472A33 /* SepetYemegiListSearchBarProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4EABB828C751FB00472A33 /* SepetYemegiListSearchBarProvider.swift */; };
+		CB4EABBC28C7B72300472A33 /* SepetYemegiDetailContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4EABBB28C7B72300472A33 /* SepetYemegiDetailContracts.swift */; };
+		CB4EABBE28C7B86000472A33 /* SepetYemegiDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4EABBD28C7B86000472A33 /* SepetYemegiDetailBuilder.swift */; };
+		CB4EABC028C7B87800472A33 /* SepetYemegiDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4EABBF28C7B87800472A33 /* SepetYemegiDetailInteractor.swift */; };
+		CB4EABC228C7B88100472A33 /* SepetYemegiDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4EABC128C7B88100472A33 /* SepetYemegiDetailPresenter.swift */; };
+		CB4EABC428C7B89A00472A33 /* SepetYemegiDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4EABC328C7B89A00472A33 /* SepetYemegiDetailVC.swift */; };
+		CB9F4F5628C5FDD800FEA143 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F4F5528C5FDD800FEA143 /* AppDelegate.swift */; };
+		CB9F4F5828C5FDD800FEA143 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F4F5728C5FDD800FEA143 /* SceneDelegate.swift */; };
+		CB9F4F5D28C5FDD800FEA143 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB9F4F5B28C5FDD800FEA143 /* Main.storyboard */; };
+		CB9F4F5F28C5FDDE00FEA143 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB9F4F5E28C5FDDE00FEA143 /* Assets.xcassets */; };
+		CB9F4F6228C5FDDE00FEA143 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB9F4F6028C5FDDE00FEA143 /* LaunchScreen.storyboard */; };
+		CB9F4F6F28C604B600FEA143 /* SepetYemegiListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F4F6E28C604B600FEA143 /* SepetYemegiListVC.swift */; };
+		CB9F4F7328C604DA00FEA143 /* SepetYemegiListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F4F7228C604DA00FEA143 /* SepetYemegiListInteractor.swift */; };
+		CB9F4F7528C604E500FEA143 /* SepetYemegiListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F4F7428C604E500FEA143 /* SepetYemegiListPresenter.swift */; };
+		CB9F4F7728C604EE00FEA143 /* SepetYemegiListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F4F7628C604EE00FEA143 /* SepetYemegiListRouter.swift */; };
+		CB9F4F7928C604F700FEA143 /* SepetYemegiListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F4F7828C604F700FEA143 /* SepetYemegiListBuilder.swift */; };
+		CB9F4F7B28C6051500FEA143 /* SepetYemegiListContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F4F7A28C6051500FEA143 /* SepetYemegiListContracts.swift */; };
+		CB9F4F7D28C6052A00FEA143 /* SepetYemegiListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F4F7C28C6052A00FEA143 /* SepetYemegiListProvider.swift */; };
+		CB9F4F7F28C6054B00FEA143 /* SepetYemegiListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F4F7E28C6054B00FEA143 /* SepetYemegiListCollectionViewCell.swift */; };
+		CB9F4F8128C6056F00FEA143 /* SepetYemegiListCollectionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F4F8028C6056F00FEA143 /* SepetYemegiListCollectionCellViewModel.swift */; };
+		CB9F4F8528C643C500FEA143 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F4F8428C643C500FEA143 /* Service.swift */; };
+		CB9F4F8A28C6441E00FEA143 /* SepetYemegiListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F4F8928C6441E00FEA143 /* SepetYemegiListModel.swift */; };
+		CB9F4F8D28C65BFB00FEA143 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CB9F4F8C28C65BFB00FEA143 /* Alamofire */; };
+		CB9F4F9028C65C1000FEA143 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = CB9F4F8F28C65C1000FEA143 /* AlamofireImage */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CB4EABB828C751FB00472A33 /* SepetYemegiListSearchBarProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiListSearchBarProvider.swift; sourceTree = "<group>"; };
+		CB4EABBB28C7B72300472A33 /* SepetYemegiDetailContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiDetailContracts.swift; sourceTree = "<group>"; };
+		CB4EABBD28C7B86000472A33 /* SepetYemegiDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiDetailBuilder.swift; sourceTree = "<group>"; };
+		CB4EABBF28C7B87800472A33 /* SepetYemegiDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiDetailInteractor.swift; sourceTree = "<group>"; };
+		CB4EABC128C7B88100472A33 /* SepetYemegiDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiDetailPresenter.swift; sourceTree = "<group>"; };
+		CB4EABC328C7B89A00472A33 /* SepetYemegiDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiDetailVC.swift; sourceTree = "<group>"; };
+		CB9F4F5228C5FDD800FEA143 /* SepetYemegi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SepetYemegi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB9F4F5528C5FDD800FEA143 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CB9F4F5728C5FDD800FEA143 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CB9F4F5C28C5FDD800FEA143 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CB9F4F5E28C5FDDE00FEA143 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CB9F4F6128C5FDDE00FEA143 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CB9F4F6328C5FDDE00FEA143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB9F4F6E28C604B600FEA143 /* SepetYemegiListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiListVC.swift; sourceTree = "<group>"; };
+		CB9F4F7228C604DA00FEA143 /* SepetYemegiListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiListInteractor.swift; sourceTree = "<group>"; };
+		CB9F4F7428C604E500FEA143 /* SepetYemegiListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiListPresenter.swift; sourceTree = "<group>"; };
+		CB9F4F7628C604EE00FEA143 /* SepetYemegiListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiListRouter.swift; sourceTree = "<group>"; };
+		CB9F4F7828C604F700FEA143 /* SepetYemegiListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiListBuilder.swift; sourceTree = "<group>"; };
+		CB9F4F7A28C6051500FEA143 /* SepetYemegiListContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiListContracts.swift; sourceTree = "<group>"; };
+		CB9F4F7C28C6052A00FEA143 /* SepetYemegiListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiListProvider.swift; sourceTree = "<group>"; };
+		CB9F4F7E28C6054B00FEA143 /* SepetYemegiListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiListCollectionViewCell.swift; sourceTree = "<group>"; };
+		CB9F4F8028C6056F00FEA143 /* SepetYemegiListCollectionCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiListCollectionCellViewModel.swift; sourceTree = "<group>"; };
+		CB9F4F8428C643C500FEA143 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		CB9F4F8928C6441E00FEA143 /* SepetYemegiListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiListModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB9F4F4F28C5FDD800FEA143 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB9F4F8D28C65BFB00FEA143 /* Alamofire in Frameworks */,
+				CB9F4F9028C65C1000FEA143 /* AlamofireImage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB4EABBA28C7B70400472A33 /* SepetYemegiDetail */ = {
+			isa = PBXGroup;
+			children = (
+				CB4EABBB28C7B72300472A33 /* SepetYemegiDetailContracts.swift */,
+				CB4EABBD28C7B86000472A33 /* SepetYemegiDetailBuilder.swift */,
+				CB4EABBF28C7B87800472A33 /* SepetYemegiDetailInteractor.swift */,
+				CB4EABC128C7B88100472A33 /* SepetYemegiDetailPresenter.swift */,
+				CB4EABC328C7B89A00472A33 /* SepetYemegiDetailVC.swift */,
+			);
+			path = SepetYemegiDetail;
+			sourceTree = "<group>";
+		};
+		CB9F4F4928C5FDD800FEA143 = {
+			isa = PBXGroup;
+			children = (
+				CB9F4F5428C5FDD800FEA143 /* SepetYemegi */,
+				CB9F4F5328C5FDD800FEA143 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CB9F4F5328C5FDD800FEA143 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB9F4F5228C5FDD800FEA143 /* SepetYemegi.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB9F4F5428C5FDD800FEA143 /* SepetYemegi */ = {
+			isa = PBXGroup;
+			children = (
+				CB9F4F8228C643B000FEA143 /* Network */,
+				CB9F4F6C28C6047200FEA143 /* Screens */,
+				CB9F4F6B28C6042D00FEA143 /* Core */,
+				CB9F4F6A28C6042500FEA143 /* Resources */,
+				CB9F4F6928C603D900FEA143 /* Supporting Files */,
+				CB9F4F5B28C5FDD800FEA143 /* Main.storyboard */,
+			);
+			path = SepetYemegi;
+			sourceTree = "<group>";
+		};
+		CB9F4F6928C603D900FEA143 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB9F4F6328C5FDDE00FEA143 /* Info.plist */,
+				CB9F4F6028C5FDDE00FEA143 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CB9F4F6A28C6042500FEA143 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CB9F4F5E28C5FDDE00FEA143 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CB9F4F6B28C6042D00FEA143 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CB9F4F5728C5FDD800FEA143 /* SceneDelegate.swift */,
+				CB9F4F5528C5FDD800FEA143 /* AppDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		CB9F4F6C28C6047200FEA143 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				CB4EABBA28C7B70400472A33 /* SepetYemegiDetail */,
+				CB9F4F6D28C6048F00FEA143 /* SepetYemegiList */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		CB9F4F6D28C6048F00FEA143 /* SepetYemegiList */ = {
+			isa = PBXGroup;
+			children = (
+				CB9F4F7028C604BA00FEA143 /* Cell */,
+				CB9F4F6E28C604B600FEA143 /* SepetYemegiListVC.swift */,
+				CB9F4F7228C604DA00FEA143 /* SepetYemegiListInteractor.swift */,
+				CB9F4F7428C604E500FEA143 /* SepetYemegiListPresenter.swift */,
+				CB9F4F7628C604EE00FEA143 /* SepetYemegiListRouter.swift */,
+				CB9F4F7828C604F700FEA143 /* SepetYemegiListBuilder.swift */,
+				CB9F4F7A28C6051500FEA143 /* SepetYemegiListContracts.swift */,
+				CB9F4F7C28C6052A00FEA143 /* SepetYemegiListProvider.swift */,
+				CB4EABB828C751FB00472A33 /* SepetYemegiListSearchBarProvider.swift */,
+			);
+			path = SepetYemegiList;
+			sourceTree = "<group>";
+		};
+		CB9F4F7028C604BA00FEA143 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CB9F4F7E28C6054B00FEA143 /* SepetYemegiListCollectionViewCell.swift */,
+				CB9F4F8028C6056F00FEA143 /* SepetYemegiListCollectionCellViewModel.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CB9F4F8228C643B000FEA143 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CB9F4F8328C643BA00FEA143 /* Model */,
+				CB9F4F8428C643C500FEA143 /* Service.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CB9F4F8328C643BA00FEA143 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CB9F4F8928C6441E00FEA143 /* SepetYemegiListModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB9F4F5128C5FDD800FEA143 /* SepetYemegi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB9F4F6628C5FDDE00FEA143 /* Build configuration list for PBXNativeTarget "SepetYemegi" */;
+			buildPhases = (
+				CB9F4F4E28C5FDD800FEA143 /* Sources */,
+				CB9F4F4F28C5FDD800FEA143 /* Frameworks */,
+				CB9F4F5028C5FDD800FEA143 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SepetYemegi;
+			packageProductDependencies = (
+				CB9F4F8C28C65BFB00FEA143 /* Alamofire */,
+				CB9F4F8F28C65C1000FEA143 /* AlamofireImage */,
+			);
+			productName = SepetYemegi;
+			productReference = CB9F4F5228C5FDD800FEA143 /* SepetYemegi.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB9F4F4A28C5FDD800FEA143 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					CB9F4F5128C5FDD800FEA143 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = CB9F4F4D28C5FDD800FEA143 /* Build configuration list for PBXProject "SepetYemegi" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CB9F4F4928C5FDD800FEA143;
+			packageReferences = (
+				CB9F4F8B28C65BFB00FEA143 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CB9F4F8E28C65C1000FEA143 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+			);
+			productRefGroup = CB9F4F5328C5FDD800FEA143 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB9F4F5128C5FDD800FEA143 /* SepetYemegi */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB9F4F5028C5FDD800FEA143 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB9F4F6228C5FDDE00FEA143 /* LaunchScreen.storyboard in Resources */,
+				CB9F4F5F28C5FDDE00FEA143 /* Assets.xcassets in Resources */,
+				CB9F4F5D28C5FDD800FEA143 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB9F4F4E28C5FDD800FEA143 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB9F4F6F28C604B600FEA143 /* SepetYemegiListVC.swift in Sources */,
+				CB9F4F7528C604E500FEA143 /* SepetYemegiListPresenter.swift in Sources */,
+				CB4EABC228C7B88100472A33 /* SepetYemegiDetailPresenter.swift in Sources */,
+				CB9F4F5628C5FDD800FEA143 /* AppDelegate.swift in Sources */,
+				CB9F4F7928C604F700FEA143 /* SepetYemegiListBuilder.swift in Sources */,
+				CB4EABBE28C7B86000472A33 /* SepetYemegiDetailBuilder.swift in Sources */,
+				CB9F4F7F28C6054B00FEA143 /* SepetYemegiListCollectionViewCell.swift in Sources */,
+				CB9F4F8528C643C500FEA143 /* Service.swift in Sources */,
+				CB4EABB928C751FB00472A33 /* SepetYemegiListSearchBarProvider.swift in Sources */,
+				CB4EABBC28C7B72300472A33 /* SepetYemegiDetailContracts.swift in Sources */,
+				CB9F4F7D28C6052A00FEA143 /* SepetYemegiListProvider.swift in Sources */,
+				CB4EABC428C7B89A00472A33 /* SepetYemegiDetailVC.swift in Sources */,
+				CB9F4F7328C604DA00FEA143 /* SepetYemegiListInteractor.swift in Sources */,
+				CB9F4F8128C6056F00FEA143 /* SepetYemegiListCollectionCellViewModel.swift in Sources */,
+				CB9F4F7728C604EE00FEA143 /* SepetYemegiListRouter.swift in Sources */,
+				CB9F4F5828C5FDD800FEA143 /* SceneDelegate.swift in Sources */,
+				CB9F4F8A28C6441E00FEA143 /* SepetYemegiListModel.swift in Sources */,
+				CB4EABC028C7B87800472A33 /* SepetYemegiDetailInteractor.swift in Sources */,
+				CB9F4F7B28C6051500FEA143 /* SepetYemegiListContracts.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CB9F4F5B28C5FDD800FEA143 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB9F4F5C28C5FDD800FEA143 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CB9F4F6028C5FDDE00FEA143 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB9F4F6128C5FDDE00FEA143 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CB9F4F6428C5FDDE00FEA143 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CB9F4F6528C5FDDE00FEA143 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB9F4F6728C5FDDE00FEA143 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SepetYemegi/Supporting Files/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = deneme.c.SepetYemegi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CB9F4F6828C5FDDE00FEA143 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SepetYemegi/Supporting Files/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = deneme.c.SepetYemegi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB9F4F4D28C5FDD800FEA143 /* Build configuration list for PBXProject "SepetYemegi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB9F4F6428C5FDDE00FEA143 /* Debug */,
+				CB9F4F6528C5FDDE00FEA143 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB9F4F6628C5FDDE00FEA143 /* Build configuration list for PBXNativeTarget "SepetYemegi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB9F4F6728C5FDDE00FEA143 /* Debug */,
+				CB9F4F6828C5FDDE00FEA143 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CB9F4F8B28C65BFB00FEA143 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		CB9F4F8E28C65C1000FEA143 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CB9F4F8C28C65BFB00FEA143 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB9F4F8B28C65BFB00FEA143 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		CB9F4F8F28C65C1000FEA143 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB9F4F8E28C65C1000FEA143 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CB9F4F4A28C5FDD800FEA143 /* Project object */;
+}
