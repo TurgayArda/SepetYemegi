@@ -30,7 +30,7 @@ extension SepetYemegiListPresenter: SepetYemegiListInteractorDelegate {
     func handleOutPut(_ output: SepetYemegiListInteractorOutPut) {
         switch output {
         case .foodList(let foodList):
-            view?.handleOutPut(.title("SepetYemegi"))
+            view?.handleOutPut(.title(SepetYemegiListConstant.SepetYemegiListTitle.title.rawValue))
             view?.handleOutPut(.foodList(foodList))
         case .error(let error):
             view?.handleOutPut(.error(error))

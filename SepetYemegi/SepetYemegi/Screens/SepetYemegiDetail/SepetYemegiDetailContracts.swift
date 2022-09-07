@@ -26,11 +26,13 @@ protocol SepetYemegiDetailInteractorDelegate {
 
 protocol SepetYemegiDetailPresenterProtocol: AnyObject {
     func load()
-//    func getTextFieldText() -> String
+    func getFoodName() -> String
+    func getFoodPrice() -> String
 }
 
 enum SepetYemegiDetailPresenterOutPut {
     case foodDetail(FoodList)
+    case title(String)
 }
 
 //MARK: - View

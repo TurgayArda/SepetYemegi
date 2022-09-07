@@ -29,11 +29,11 @@ extension SepetYemegiListSearchBarProvider: UISearchBarDelegate {
         delegate?.searchKey(searchText: searchText)
         searchBar.resignFirstResponder()
     }
- 
+    
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchBar.setShowsCancelButton(true, animated: true)
     }
-
+    
     func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
         searchBar.setShowsCancelButton(false, animated: true)
         return true

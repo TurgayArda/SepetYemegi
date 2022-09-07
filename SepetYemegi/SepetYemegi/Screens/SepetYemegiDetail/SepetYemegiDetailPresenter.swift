@@ -33,6 +33,8 @@ extension SepetYemegiDetailPresenter:  SepetYemegiDetailInteractorDelegate {
     func handleOutPut(_ output: SepetYemegiDetailInteractorOutPut) {
         switch output {
         case .foodDetail(let foodDetail):
+            self.foodDetail = foodDetail
+            view?.handleOutPut(.title(foodDetail.yemekAdi ?? ""))
             view?.handleOutPut(.foodDetail(foodDetail))
         }
     }
@@ -41,11 +43,19 @@ extension SepetYemegiDetailPresenter:  SepetYemegiDetailInteractorDelegate {
 //MARK: - UI
 
 extension SepetYemegiDetailPresenter {
-//    func getTextFieldText() -> String {
-//        guard let text = todosData?.toDo_name else {
-//            return ToDosDetailConstant.ViewsConstant.unknown.rawValue
-//        }
-//
-//        return text
-//    }
+    func getFoodName() -> String {
+        guard let foodName = foodDetail?.yemekAdi else {
+            return SepetYemegiDetailConstant.PropertyText.unknown.rawValue
+        }
+        
+        return foodName
+    }
+    
+    func getFoodPrice() -> String {
+        guard let foodPrice = foodDetail?.yemekFiyat else {
+            return SepetYemegiDetailConstant.PropertyText.unknown.rawValue
+        }
+        
+        return foodPrice
+    }
 }

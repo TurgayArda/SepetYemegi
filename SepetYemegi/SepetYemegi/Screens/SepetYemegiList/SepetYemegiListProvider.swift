@@ -27,7 +27,7 @@ extension SepetYemegiListProvider: SepetYemegiListProviderProtocol {
     func issearch(isSearch: Bool) {
         self.isSearch = isSearch
     }
-
+    
     func remove() {
         foodListData.removeAll()
     }
@@ -48,7 +48,7 @@ extension SepetYemegiListProvider: UICollectionViewDataSource, UICollectionViewD
         }
         
         cell.cellViewModel = SepetYemegiistCollectionCellViewModel()
-    
+        
         if isSearch {
             let searchData = foodListSearchData[indexPath.row]
             cell.saveModel(value: searchData)
@@ -56,7 +56,7 @@ extension SepetYemegiListProvider: UICollectionViewDataSource, UICollectionViewD
             let data = foodListData[indexPath.row]
             cell.saveModel(value: data)
         }
-      
+        
         return cell
     }
     

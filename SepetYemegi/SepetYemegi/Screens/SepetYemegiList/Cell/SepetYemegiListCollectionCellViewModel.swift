@@ -15,7 +15,7 @@ protocol SepetYemegiListCollectionCellViewModelProtocol {
 class  SepetYemegiistCollectionCellViewModel: SepetYemegiListCollectionCellViewModelProtocol {
     func getFoodName(food: FoodList) -> String {
         guard let name = food.yemekAdi else {
-            return "Unknow"
+            return SepetYemegiListConstant.PropertyText.unknown.rawValue
         }
         
         return name
@@ -23,7 +23,7 @@ class  SepetYemegiistCollectionCellViewModel: SepetYemegiListCollectionCellViewM
     
     func getFoodPrice(food: FoodList) -> String {
         guard let price = food.yemekFiyat else {
-            return "Unknow"
+            return SepetYemegiListConstant.PropertyText.unknown.rawValue
         }
         
         return "$\(price)"

@@ -30,7 +30,7 @@ class SepetYemegiListCollectionViewCell: UICollectionViewCell {
         foodPrice.text = cellViewModel?.getFoodPrice(food: food)
         
         if let imageName = food.yemekResimAdi {
-        if let url = URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(imageName)") {
+            if let url = URL(string: SepetYemegiListConstant.imageURL.foodListImageURL(imageName: imageName)){
             FoodImage.af.setImage(withURL: url)
         }
     }

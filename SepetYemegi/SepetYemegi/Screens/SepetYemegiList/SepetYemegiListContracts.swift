@@ -67,6 +67,7 @@ protocol SepetYemegiListSearchBarProviderDelegate {
 }
 
 //MARK: - Router
+
 enum SepetYemegiListRouterOutPut {
     case detail(FoodList)
 }

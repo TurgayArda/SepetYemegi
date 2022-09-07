@@ -8,7 +8,7 @@
 import UIKit
 
 class SepetYemegiListVC: UIViewController {
-
+    
     //MARK: - Views
     
     @IBOutlet weak var foodSearchBar: UISearchBar!
@@ -22,13 +22,12 @@ class SepetYemegiListVC: UIViewController {
     private var foodList: [FoodList] = []
     private var foodListSearchData: [FoodList] = []
     private var isSearch = false
-    private let colorNavigation = UIColor(red: 0.98, green: 0.38, blue: 0.38, alpha: 1.00) //pembis
+    private let colorView = UIColor(red: 0.98, green: 0.38, blue: 0.38, alpha: 1.00)
     private let tableBackColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1.00)
     
-  
     var presenter: SepetYemegiListPresenterProtocol?
     var router: SepetYemegiListRouterProtocol?
- 
+    
     
     //MARK: - Life Cycle
     
@@ -44,34 +43,26 @@ class SepetYemegiListVC: UIViewController {
     //MARK: - Private Func
     
     private func collectionLayout() {
-        let tasarim: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        let genislik = self.foodCollectionView.frame.size.width
-        tasarim.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        tasarim.minimumInteritemSpacing = 5
-        tasarim.minimumLineSpacing = 10
-        let hucreGenislik =  (genislik - 30) / 2
-        tasarim.itemSize = CGSize(width: hucreGenislik, height: hucreGenislik * 1.85)
-        foodCollectionView.collectionViewLayout = tasarim
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        let foodWidth = self.foodCollectionView.frame.size.width
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        layout.minimumInteritemSpacing = 5
+        layout.minimumLineSpacing = 10
+        let cellWidth =  (foodWidth - 30) / 2
+        layout.itemSize = CGSize(width: cellWidth, height: cellWidth * 1.35)
+        foodCollectionView.collectionViewLayout = layout
     }
     
     private func initDelegate() {
-        view.backgroundColor = colorNavigation
+        view.backgroundColor = colorView
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-    
+        
         foodListProvider.delegate = self
         foodListSearchBarProvider.delegate = self
         foodCollectionView.delegate = foodListProvider
         foodCollectionView.dataSource = foodListProvider
         foodSearchBar.delegate = foodListSearchBarProvider
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "goToDetail" {
-//            guard let foodDetail = sender as? FoodList else { return }
-//            let gidilecekVC =  SepetYemegiDetailInteractor()
-//            gidilecekVC.foodDetail = foodDetail
-//        }
-//    }
 }
 
 //MARK: - SepetYemegiListSearchBarProviderDelegate
@@ -117,7 +108,6 @@ extension SepetYemegiListVC: SepetYemegiListViewDelegate {
 
 extension SepetYemegiListVC: SepetYemegiListProviderDelegate {
     func selected(at select: FoodList) {
-//        performSegue(withIdentifier: "goToDetail", sender: select)
         router?.navigate(to: .detail(select))
     }
     

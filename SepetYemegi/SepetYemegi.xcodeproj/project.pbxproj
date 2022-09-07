@@ -31,6 +31,8 @@
 		CB9F4F8A28C6441E00FEA143 /* SepetYemegiListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F4F8928C6441E00FEA143 /* SepetYemegiListModel.swift */; };
 		CB9F4F8D28C65BFB00FEA143 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CB9F4F8C28C65BFB00FEA143 /* Alamofire */; };
 		CB9F4F9028C65C1000FEA143 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = CB9F4F8F28C65C1000FEA143 /* AlamofireImage */; };
+		CBDC71AA28C8DF7E00540AFE /* SepetYemegiListConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDC71A928C8DF7E00540AFE /* SepetYemegiListConstant.swift */; };
+		CBDC71AD28C8E4E700540AFE /* SepetYemegiDetailConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDC71AC28C8E4E700540AFE /* SepetYemegiDetailConstant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		CB9F4F8028C6056F00FEA143 /* SepetYemegiListCollectionCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiListCollectionCellViewModel.swift; sourceTree = "<group>"; };
 		CB9F4F8428C643C500FEA143 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		CB9F4F8928C6441E00FEA143 /* SepetYemegiListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiListModel.swift; sourceTree = "<group>"; };
+		CBDC71A928C8DF7E00540AFE /* SepetYemegiListConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiListConstant.swift; sourceTree = "<group>"; };
+		CBDC71AC28C8E4E700540AFE /* SepetYemegiDetailConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiDetailConstant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 		CB9F4F5428C5FDD800FEA143 /* SepetYemegi */ = {
 			isa = PBXGroup;
 			children = (
+				CBDC71A728C8DF6100540AFE /* Constant */,
 				CB9F4F8228C643B000FEA143 /* Network */,
 				CB9F4F6C28C6047200FEA143 /* Screens */,
 				CB9F4F6B28C6042D00FEA143 /* Core */,
@@ -191,6 +196,31 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		CBDC71A728C8DF6100540AFE /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				CBDC71AB28C8E4CE00540AFE /* SepetYemegiDetailConstant */,
+				CBDC71A828C8DF6600540AFE /* SepetYemegiListConstant */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		CBDC71A828C8DF6600540AFE /* SepetYemegiListConstant */ = {
+			isa = PBXGroup;
+			children = (
+				CBDC71A928C8DF7E00540AFE /* SepetYemegiListConstant.swift */,
+			);
+			path = SepetYemegiListConstant;
+			sourceTree = "<group>";
+		};
+		CBDC71AB28C8E4CE00540AFE /* SepetYemegiDetailConstant */ = {
+			isa = PBXGroup;
+			children = (
+				CBDC71AC28C8E4E700540AFE /* SepetYemegiDetailConstant.swift */,
+			);
+			path = SepetYemegiDetailConstant;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -273,6 +303,7 @@
 				CB9F4F6F28C604B600FEA143 /* SepetYemegiListVC.swift in Sources */,
 				CB9F4F7528C604E500FEA143 /* SepetYemegiListPresenter.swift in Sources */,
 				CB4EABC228C7B88100472A33 /* SepetYemegiDetailPresenter.swift in Sources */,
+				CBDC71AA28C8DF7E00540AFE /* SepetYemegiListConstant.swift in Sources */,
 				CB9F4F5628C5FDD800FEA143 /* AppDelegate.swift in Sources */,
 				CB9F4F7928C604F700FEA143 /* SepetYemegiListBuilder.swift in Sources */,
 				CB4EABBE28C7B86000472A33 /* SepetYemegiDetailBuilder.swift in Sources */,
@@ -282,6 +313,7 @@
 				CB4EABBC28C7B72300472A33 /* SepetYemegiDetailContracts.swift in Sources */,
 				CB9F4F7D28C6052A00FEA143 /* SepetYemegiListProvider.swift in Sources */,
 				CB4EABC428C7B89A00472A33 /* SepetYemegiDetailVC.swift in Sources */,
+				CBDC71AD28C8E4E700540AFE /* SepetYemegiDetailConstant.swift in Sources */,
 				CB9F4F7328C604DA00FEA143 /* SepetYemegiListInteractor.swift in Sources */,
 				CB9F4F8128C6056F00FEA143 /* SepetYemegiListCollectionCellViewModel.swift in Sources */,
 				CB9F4F7728C604EE00FEA143 /* SepetYemegiListRouter.swift in Sources */,
