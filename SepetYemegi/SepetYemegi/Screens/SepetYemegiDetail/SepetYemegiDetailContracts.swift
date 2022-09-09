@@ -12,6 +12,7 @@ import Foundation
 protocol SepetYemegiDetailInteractorProtocol {
     var delegate: SepetYemegiDetailInteractorDelegate? { get set }
     func load()
+    func addBasketInteractor(food: FoodList, pieceCount: Int, userName: String)
 }
 
 enum SepetYemegiDetailInteractorOutPut {
@@ -26,6 +27,7 @@ protocol SepetYemegiDetailInteractorDelegate {
 
 protocol SepetYemegiDetailPresenterProtocol: AnyObject {
     func load()
+    func addBasketPresenter(food: FoodList, pieceCount: Int, userName: String)
     func getFoodName() -> String
     func getFoodPrice() -> String
 }

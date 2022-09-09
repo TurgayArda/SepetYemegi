@@ -74,4 +74,5 @@ enum SepetYemegiListRouterOutPut {
 
 protocol SepetYemegiListRouterProtocol: AnyObject {
     func navigate(to route: SepetYemegiListRouterOutPut)
+    func navigateBasket()
 }

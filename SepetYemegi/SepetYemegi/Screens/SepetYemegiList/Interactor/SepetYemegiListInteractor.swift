@@ -18,7 +18,7 @@ class SepetYemegiInteractor: SepetYemegiListInteractorProtocol {
 
 extension SepetYemegiInteractor {
     func load() {
-        service?.fetch(url: SepetYemegiListConstant.SepetYemegiListURL.foodListURL(),
+        service?.fetch(url: SepetYemegiListConstant.SepetYemegiListURL.foodListURL(), parameters: ["":nil ?? [[]]],
                        completion: { [delegate] (result: Result<FoodListResult, Error>) in
             switch result {
             case .success(let foodList):

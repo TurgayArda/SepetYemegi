@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB02AA9D28CB543F0009E557 /* SepetYemegiBasketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB02AA9C28CB543F0009E557 /* SepetYemegiBasketModel.swift */; };
+		CB02AA9F28CB5BEF0009E557 /* SepetEkleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB02AA9E28CB5BEF0009E557 /* SepetEkleService.swift */; };
+		CB181B2C28CA2FF600F3DAB4 /* SepetYemegiBasketInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB181B2B28CA2FF600F3DAB4 /* SepetYemegiBasketInteractor.swift */; };
+		CB181B2F28CA300300F3DAB4 /* SepetYemegiBasketPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB181B2E28CA300300F3DAB4 /* SepetYemegiBasketPresenter.swift */; };
+		CB181B3228CA301000F3DAB4 /* SepetYemegiBasketProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB181B3128CA301000F3DAB4 /* SepetYemegiBasketProvider.swift */; };
+		CB181B3428CA301800F3DAB4 /* SepetYemegiBasketRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB181B3328CA301800F3DAB4 /* SepetYemegiBasketRouter.swift */; };
+		CB181B3728CA302500F3DAB4 /* SepetYemegiBasketBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB181B3628CA302500F3DAB4 /* SepetYemegiBasketBuilder.swift */; };
+		CB181B3928CA303400F3DAB4 /* SepetYemegiBasketVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB181B3828CA303400F3DAB4 /* SepetYemegiBasketVC.swift */; };
+		CB181B3B28CA304E00F3DAB4 /* SepetYemegiBasketContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB181B3A28CA304E00F3DAB4 /* SepetYemegiBasketContracts.swift */; };
+		CB181B3D28CA305F00F3DAB4 /* SepetYemegiDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB181B3C28CA305F00F3DAB4 /* SepetYemegiDetailRouter.swift */; };
+		CB181B3F28CA329700F3DAB4 /* SepetYemegiBasketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB181B3E28CA329700F3DAB4 /* SepetYemegiBasketTableViewCell.swift */; };
+		CB181B4128CA32B000F3DAB4 /* SepetYemegiBasketTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB181B4028CA32B000F3DAB4 /* SepetYemegiBasketTableViewCellViewModel.swift */; };
 		CB4EABB928C751FB00472A33 /* SepetYemegiListSearchBarProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4EABB828C751FB00472A33 /* SepetYemegiListSearchBarProvider.swift */; };
 		CB4EABBC28C7B72300472A33 /* SepetYemegiDetailContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4EABBB28C7B72300472A33 /* SepetYemegiDetailContracts.swift */; };
 		CB4EABBE28C7B86000472A33 /* SepetYemegiDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4EABBD28C7B86000472A33 /* SepetYemegiDetailBuilder.swift */; };
@@ -36,6 +48,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB02AA9C28CB543F0009E557 /* SepetYemegiBasketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiBasketModel.swift; sourceTree = "<group>"; };
+		CB02AA9E28CB5BEF0009E557 /* SepetEkleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetEkleService.swift; sourceTree = "<group>"; };
+		CB181B2B28CA2FF600F3DAB4 /* SepetYemegiBasketInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiBasketInteractor.swift; sourceTree = "<group>"; };
+		CB181B2E28CA300300F3DAB4 /* SepetYemegiBasketPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiBasketPresenter.swift; sourceTree = "<group>"; };
+		CB181B3128CA301000F3DAB4 /* SepetYemegiBasketProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiBasketProvider.swift; sourceTree = "<group>"; };
+		CB181B3328CA301800F3DAB4 /* SepetYemegiBasketRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiBasketRouter.swift; sourceTree = "<group>"; };
+		CB181B3628CA302500F3DAB4 /* SepetYemegiBasketBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiBasketBuilder.swift; sourceTree = "<group>"; };
+		CB181B3828CA303400F3DAB4 /* SepetYemegiBasketVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiBasketVC.swift; sourceTree = "<group>"; };
+		CB181B3A28CA304E00F3DAB4 /* SepetYemegiBasketContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiBasketContracts.swift; sourceTree = "<group>"; };
+		CB181B3C28CA305F00F3DAB4 /* SepetYemegiDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiDetailRouter.swift; sourceTree = "<group>"; };
+		CB181B3E28CA329700F3DAB4 /* SepetYemegiBasketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiBasketTableViewCell.swift; sourceTree = "<group>"; };
+		CB181B4028CA32B000F3DAB4 /* SepetYemegiBasketTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiBasketTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		CB4EABB828C751FB00472A33 /* SepetYemegiListSearchBarProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiListSearchBarProvider.swift; sourceTree = "<group>"; };
 		CB4EABBB28C7B72300472A33 /* SepetYemegiDetailContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiDetailContracts.swift; sourceTree = "<group>"; };
 		CB4EABBD28C7B86000472A33 /* SepetYemegiDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiDetailBuilder.swift; sourceTree = "<group>"; };
@@ -77,6 +101,87 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB181B2928CA2FC200F3DAB4 /* SepetYemegiBasket */ = {
+			isa = PBXGroup;
+			children = (
+				CB181B2A28CA2FD300F3DAB4 /* Cell */,
+				CB181B2B28CA2FF600F3DAB4 /* SepetYemegiBasketInteractor.swift */,
+				CB181B2E28CA300300F3DAB4 /* SepetYemegiBasketPresenter.swift */,
+				CB181B3128CA301000F3DAB4 /* SepetYemegiBasketProvider.swift */,
+				CB181B3328CA301800F3DAB4 /* SepetYemegiBasketRouter.swift */,
+				CB181B3628CA302500F3DAB4 /* SepetYemegiBasketBuilder.swift */,
+				CB181B3828CA303400F3DAB4 /* SepetYemegiBasketVC.swift */,
+				CB181B3A28CA304E00F3DAB4 /* SepetYemegiBasketContracts.swift */,
+			);
+			path = SepetYemegiBasket;
+			sourceTree = "<group>";
+		};
+		CB181B2A28CA2FD300F3DAB4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CB181B3E28CA329700F3DAB4 /* SepetYemegiBasketTableViewCell.swift */,
+				CB181B4028CA32B000F3DAB4 /* SepetYemegiBasketTableViewCellViewModel.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CB181B4228CA39AA00F3DAB4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CB9F4F6E28C604B600FEA143 /* SepetYemegiListVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CB181B4328CA39B600F3DAB4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CB9F4F7428C604E500FEA143 /* SepetYemegiListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CB181B4428CA39BF00F3DAB4 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CB9F4F7228C604DA00FEA143 /* SepetYemegiListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CB181B4528CA39C900F3DAB4 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				CB4EABB828C751FB00472A33 /* SepetYemegiListSearchBarProvider.swift */,
+				CB9F4F7C28C6052A00FEA143 /* SepetYemegiListProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		CB181B4628CA39D800F3DAB4 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				CB9F4F7628C604EE00FEA143 /* SepetYemegiListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		CB181B4728CA39E000F3DAB4 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				CB9F4F7828C604F700FEA143 /* SepetYemegiListBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		CB181B4828CA39E800F3DAB4 /* Contracts */ = {
+			isa = PBXGroup;
+			children = (
+				CB9F4F7A28C6051500FEA143 /* SepetYemegiListContracts.swift */,
+			);
+			path = Contracts;
+			sourceTree = "<group>";
+		};
 		CB4EABBA28C7B70400472A33 /* SepetYemegiDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +190,7 @@
 				CB4EABBF28C7B87800472A33 /* SepetYemegiDetailInteractor.swift */,
 				CB4EABC128C7B88100472A33 /* SepetYemegiDetailPresenter.swift */,
 				CB4EABC328C7B89A00472A33 /* SepetYemegiDetailVC.swift */,
+				CB181B3C28CA305F00F3DAB4 /* SepetYemegiDetailRouter.swift */,
 			);
 			path = SepetYemegiDetail;
 			sourceTree = "<group>";
@@ -148,6 +254,7 @@
 		CB9F4F6C28C6047200FEA143 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				CB181B2928CA2FC200F3DAB4 /* SepetYemegiBasket */,
 				CB4EABBA28C7B70400472A33 /* SepetYemegiDetail */,
 				CB9F4F6D28C6048F00FEA143 /* SepetYemegiList */,
 			);
@@ -158,14 +265,13 @@
 			isa = PBXGroup;
 			children = (
 				CB9F4F7028C604BA00FEA143 /* Cell */,
-				CB9F4F6E28C604B600FEA143 /* SepetYemegiListVC.swift */,
-				CB9F4F7228C604DA00FEA143 /* SepetYemegiListInteractor.swift */,
-				CB9F4F7428C604E500FEA143 /* SepetYemegiListPresenter.swift */,
-				CB9F4F7628C604EE00FEA143 /* SepetYemegiListRouter.swift */,
-				CB9F4F7828C604F700FEA143 /* SepetYemegiListBuilder.swift */,
-				CB9F4F7A28C6051500FEA143 /* SepetYemegiListContracts.swift */,
-				CB9F4F7C28C6052A00FEA143 /* SepetYemegiListProvider.swift */,
-				CB4EABB828C751FB00472A33 /* SepetYemegiListSearchBarProvider.swift */,
+				CB181B4828CA39E800F3DAB4 /* Contracts */,
+				CB181B4728CA39E000F3DAB4 /* Builder */,
+				CB181B4628CA39D800F3DAB4 /* Router */,
+				CB181B4528CA39C900F3DAB4 /* Provider */,
+				CB181B4428CA39BF00F3DAB4 /* Interactor */,
+				CB181B4328CA39B600F3DAB4 /* Presenter */,
+				CB181B4228CA39AA00F3DAB4 /* View */,
 			);
 			path = SepetYemegiList;
 			sourceTree = "<group>";
@@ -184,6 +290,7 @@
 			children = (
 				CB9F4F8328C643BA00FEA143 /* Model */,
 				CB9F4F8428C643C500FEA143 /* Service.swift */,
+				CB02AA9E28CB5BEF0009E557 /* SepetEkleService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -192,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				CB9F4F8928C6441E00FEA143 /* SepetYemegiListModel.swift */,
+				CB02AA9C28CB543F0009E557 /* SepetYemegiBasketModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -300,13 +408,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB181B2C28CA2FF600F3DAB4 /* SepetYemegiBasketInteractor.swift in Sources */,
+				CB181B3728CA302500F3DAB4 /* SepetYemegiBasketBuilder.swift in Sources */,
+				CB181B3928CA303400F3DAB4 /* SepetYemegiBasketVC.swift in Sources */,
+				CB02AA9D28CB543F0009E557 /* SepetYemegiBasketModel.swift in Sources */,
 				CB9F4F6F28C604B600FEA143 /* SepetYemegiListVC.swift in Sources */,
 				CB9F4F7528C604E500FEA143 /* SepetYemegiListPresenter.swift in Sources */,
 				CB4EABC228C7B88100472A33 /* SepetYemegiDetailPresenter.swift in Sources */,
+				CB181B3B28CA304E00F3DAB4 /* SepetYemegiBasketContracts.swift in Sources */,
 				CBDC71AA28C8DF7E00540AFE /* SepetYemegiListConstant.swift in Sources */,
 				CB9F4F5628C5FDD800FEA143 /* AppDelegate.swift in Sources */,
+				CB181B4128CA32B000F3DAB4 /* SepetYemegiBasketTableViewCellViewModel.swift in Sources */,
 				CB9F4F7928C604F700FEA143 /* SepetYemegiListBuilder.swift in Sources */,
+				CB181B3428CA301800F3DAB4 /* SepetYemegiBasketRouter.swift in Sources */,
 				CB4EABBE28C7B86000472A33 /* SepetYemegiDetailBuilder.swift in Sources */,
+				CB181B3D28CA305F00F3DAB4 /* SepetYemegiDetailRouter.swift in Sources */,
 				CB9F4F7F28C6054B00FEA143 /* SepetYemegiListCollectionViewCell.swift in Sources */,
 				CB9F4F8528C643C500FEA143 /* Service.swift in Sources */,
 				CB4EABB928C751FB00472A33 /* SepetYemegiListSearchBarProvider.swift in Sources */,
@@ -315,9 +431,13 @@
 				CB4EABC428C7B89A00472A33 /* SepetYemegiDetailVC.swift in Sources */,
 				CBDC71AD28C8E4E700540AFE /* SepetYemegiDetailConstant.swift in Sources */,
 				CB9F4F7328C604DA00FEA143 /* SepetYemegiListInteractor.swift in Sources */,
+				CB181B3228CA301000F3DAB4 /* SepetYemegiBasketProvider.swift in Sources */,
+				CB02AA9F28CB5BEF0009E557 /* SepetEkleService.swift in Sources */,
 				CB9F4F8128C6056F00FEA143 /* SepetYemegiListCollectionCellViewModel.swift in Sources */,
+				CB181B3F28CA329700F3DAB4 /* SepetYemegiBasketTableViewCell.swift in Sources */,
 				CB9F4F7728C604EE00FEA143 /* SepetYemegiListRouter.swift in Sources */,
 				CB9F4F5828C5FDD800FEA143 /* SceneDelegate.swift in Sources */,
+				CB181B2F28CA300300F3DAB4 /* SepetYemegiBasketPresenter.swift in Sources */,
 				CB9F4F8A28C6441E00FEA143 /* SepetYemegiListModel.swift in Sources */,
 				CB4EABC028C7B87800472A33 /* SepetYemegiDetailInteractor.swift in Sources */,
 				CB9F4F7B28C6051500FEA143 /* SepetYemegiListContracts.swift in Sources */,

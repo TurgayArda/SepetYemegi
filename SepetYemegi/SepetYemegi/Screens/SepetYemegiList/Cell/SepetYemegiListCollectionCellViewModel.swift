@@ -26,6 +26,6 @@ class  SepetYemegiistCollectionCellViewModel: SepetYemegiListCollectionCellViewM
             return SepetYemegiListConstant.PropertyText.unknown.rawValue
         }
         
-        return "$\(price)"
+        return "₺\(price)"
     }
 }

@@ -14,14 +14,15 @@ enum HttpError: Error {
 
 
 protocol SepetYemegiServiceProtocol {
-    func fetch<T: Codable>(url: String, completion: @escaping (Result<T, Error>) -> Void)
+    func fetch<T: Codable>(url: String, parameters: Parameters, completion: @escaping (Result<T, Error>) -> Void)
 }
 
 class SepetYemegiService: SepetYemegiServiceProtocol {
     func fetch<T: Codable>(url: String,
+                           parameters: Parameters,
                            completion: @escaping (Result<T, Error>) -> Void) {
 
-        AF.request(url, method: .get).responseDecodable(of: T.self) { food in
+        AF.request(url, method: .post,parameters: parameters).responseDecodable(of: T.self) { food in
             guard let data = food.value else {
                 return completion(.failure(HttpError.errorDecodingData))
             }

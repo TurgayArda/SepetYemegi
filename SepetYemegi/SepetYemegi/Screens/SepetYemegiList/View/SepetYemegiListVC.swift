@@ -14,6 +14,7 @@ class SepetYemegiListVC: UIViewController {
     @IBOutlet weak var foodSearchBar: UISearchBar!
     @IBOutlet weak var viewCollection: UIView!
     @IBOutlet weak var foodCollectionView: UICollectionView!
+    @IBOutlet weak var basketButton: UIBarButtonItem!
     
     //MARK: - Properties
     
@@ -35,12 +36,33 @@ class SepetYemegiListVC: UIViewController {
         super.viewDidLoad()
         
         SepetYemegiListBuilder.make(view: self)
-        collectionLayout()
         initDelegate()
         presenter?.load()
     }
     
     //MARK: - Private Func
+    
+    private func initDelegate() {
+        foodListProvider.delegate = self
+        foodListSearchBarProvider.delegate = self
+        foodCollectionView.delegate = foodListProvider
+        foodCollectionView.dataSource = foodListProvider
+        foodSearchBar.delegate = foodListSearchBarProvider
+        
+        configure()
+    }
+    
+    private func configure() {
+        view.backgroundColor = colorView
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        
+        let basketImage = UIImage(systemName: "bag")
+        let changePlusImage = basketImage?.withTintColor(.white, renderingMode: .alwaysOriginal)
+        basketButton.image = changePlusImage
+        
+        collectionLayout()
+        
+    }
     
     private func collectionLayout() {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -53,15 +75,8 @@ class SepetYemegiListVC: UIViewController {
         foodCollectionView.collectionViewLayout = layout
     }
     
-    private func initDelegate() {
-        view.backgroundColor = colorView
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        
-        foodListProvider.delegate = self
-        foodListSearchBarProvider.delegate = self
-        foodCollectionView.delegate = foodListProvider
-        foodCollectionView.dataSource = foodListProvider
-        foodSearchBar.delegate = foodListSearchBarProvider
+    @IBAction func goToBasket(_ sender: Any) {
+        router?.navigateBasket()
     }
 }
 

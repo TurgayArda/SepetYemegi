@@ -10,9 +10,8 @@ import UIKit
 final class SepetYemegiDetailBuilder {
     static func make(foodDetail: FoodList) -> SepetYemegiDetailVC {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let view = storyboard.instantiateViewController(withIdentifier: "homeDetail") as! SepetYemegiDetailVC
-        //let view = SepetYemegiDetailVC()
-        let interactor = SepetYemegiDetailInteractor(foodDetail: foodDetail)
+        let view = storyboard.instantiateViewController(withIdentifier: "SepetYemegiDetail") as! SepetYemegiDetailVC
+        let interactor = SepetYemegiDetailInteractor(foodDetail: foodDetail, service: SepetYemegiService())
         let presenter = SepetYemegiDetailPresenter(interactor: interactor, view: view)
         view.presenter = presenter
         

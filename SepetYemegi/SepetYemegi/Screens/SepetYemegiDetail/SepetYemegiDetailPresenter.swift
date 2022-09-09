@@ -25,6 +25,10 @@ extension SepetYemegiDetailPresenter {
     func load() {
         interactor?.load()
     }
+    
+    func addBasketPresenter(food: FoodList, pieceCount: Int, userName: String) {
+        interactor?.addBasketInteractor(food: food, pieceCount: pieceCount, userName: userName)
+    }
 }
 
 //MARK: - ToDosDetailInteractorDelegate
@@ -56,6 +60,6 @@ extension SepetYemegiDetailPresenter {
             return SepetYemegiDetailConstant.PropertyText.unknown.rawValue
         }
         
-        return foodPrice
+        return "₺\(foodPrice)"
     }
 }

@@ -7,14 +7,14 @@
 
 import Foundation
 
-// MARK: - YemekResult
+// MARK: - FoodResult
 
 struct FoodListResult: Codable {
     let yemekler: [FoodList]?
     let success: Int?
 }
 
-// MARK: - Yemekler
+// MARK: - Foods
 
 struct FoodList: Codable {
     let yemekID, yemekAdi, yemekResimAdi, yemekFiyat: String?

@@ -13,11 +13,22 @@ class SepetYemegiListRouter: SepetYemegiListRouterProtocol {
         self.view = view
     }
     
+    
+}
+
+extension SepetYemegiListRouter {
     func navigate(to route: SepetYemegiListRouterOutPut) {
         switch route {
         case .detail(let foodDetail):
             let viewController = SepetYemegiDetailBuilder.make(foodDetail: foodDetail)
             view.show(viewController, sender: nil)
         }
+    }
+}
+
+extension SepetYemegiListRouter {
+    func navigateBasket() {
+        let viewController = SepetYemegiBasketBuilder.make()
+        view.show(viewController, sender: nil)
     }
 }
