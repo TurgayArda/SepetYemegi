@@ -16,6 +16,8 @@ class SepetYemegiListRouter: SepetYemegiListRouterProtocol {
     
 }
 
+//MARK: - SepetYemegiListRouterProtocol
+
 extension SepetYemegiListRouter {
     func navigate(to route: SepetYemegiListRouterOutPut) {
         switch route {

@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import Alamofire
 
 class SepetYemegiInteractor: SepetYemegiListInteractorProtocol {
     var delegate:SepetYemegiListInteractorDelegate?
     let service: SepetYemegiServiceProtocol?
+    let userName = "turgayarda"
     
     init(service: SepetYemegiServiceProtocol) {
         self.service = service
@@ -27,6 +29,23 @@ extension SepetYemegiInteractor {
             case .failure(let error):
                 delegate?.handleOutPut(.error(error.localizedDescription))
             }
+        })
+    }
+    
+    func loadBasket() {
+        let params: Parameters = ["kullanici_adi": userName]
+        
+        service?.fetch(url: SepetYemegiListConstant.SepetYemegiListBasketListNetworkURL.sepetYemegiListBasketListtPath(),
+                       parameters: params,
+                       completion: { [delegate] (result: Result<BasketListResult, Error>) in
+            switch result {
+            case .success(let basketList):
+                let basketListTwo = basketList.sepet_yemekler
+                delegate?.basketHandleOutPut(.basketList(basketListTwo ?? []))
+            case .failure(let error):
+                delegate?.basketHandleOutPut(.error(error.localizedDescription))
+            }
+            
         })
     }
 }

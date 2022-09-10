@@ -23,6 +23,9 @@ class SepetYemegiListVC: UIViewController {
     private var foodList: [FoodList] = []
     private var foodListSearchData: [FoodList] = []
     private var isSearch = false
+    private var basketList: [BasketList] = []
+    private var basketListError: String = ""
+    private var badgeCount = 0
     private let colorView = UIColor(red: 0.98, green: 0.38, blue: 0.38, alpha: 1.00)
     private let tableBackColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1.00)
     
@@ -38,6 +41,11 @@ class SepetYemegiListVC: UIViewController {
         SepetYemegiListBuilder.make(view: self)
         initDelegate()
         presenter?.load()
+        presenter?.loadBasket()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        presenter?.loadBasket()
     }
     
     //MARK: - Private Func
@@ -56,12 +64,39 @@ class SepetYemegiListVC: UIViewController {
         view.backgroundColor = colorView
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         
-        let basketImage = UIImage(systemName: "bag")
-        let changePlusImage = basketImage?.withTintColor(.white, renderingMode: .alwaysOriginal)
-        basketButton.image = changePlusImage
-        
+        badgeItem(badgeCount: badgeCount)
         collectionLayout()
+    }
+    
+    private func badgeItem(badgeCount: Int) {
+        //MARK: - Badge Label
         
+        let badgeLabel = UILabel(frame: CGRect(x: 12, y: 12, width: 21, height: 21))
+        badgeLabel.layer.borderColor = UIColor.white.cgColor
+        badgeLabel.layer.borderWidth = 0.5
+        badgeLabel.adjustsFontSizeToFitWidth = true
+        badgeLabel.layer.cornerRadius = badgeLabel.bounds.size.height / 2
+        badgeLabel.textAlignment = .center
+        badgeLabel.layer.masksToBounds = true
+        badgeLabel.font = .systemFont(ofSize: 10)
+        badgeLabel.textColor = .black
+        badgeLabel.backgroundColor = colorView
+        badgeLabel.text = "\(badgeCount)"
+        
+        //MARK: - Badge button
+        
+        let imageConfiguration = UIImage.SymbolConfiguration(scale: .large)
+        let rightButton = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
+        let plusImage = UIImage(systemName: "bag", withConfiguration: imageConfiguration)
+        let changePlusImage = plusImage?.withTintColor(.white, renderingMode: .alwaysOriginal)
+        rightButton.setImage(changePlusImage, for: .normal)
+        rightButton.addTarget(self, action: #selector(allBasketCount(_:)), for: .touchUpInside)
+        rightButton.addSubview(badgeLabel)
+        
+        //MARK: - Navigation bar button item
+        
+        let rightBarButtomItem = UIBarButtonItem(customView: rightButton)
+        navigationItem.rightBarButtonItem = rightBarButtomItem
     }
     
     private func collectionLayout() {
@@ -75,8 +110,49 @@ class SepetYemegiListVC: UIViewController {
         foodCollectionView.collectionViewLayout = layout
     }
     
-    @IBAction func goToBasket(_ sender: Any) {
+    @objc func allBasketCount(_ navigationItem: UIBarButtonItem) {
         router?.navigateBasket()
+    }
+    
+    private func equateBasketItem(data: [BasketList]) {
+        var basketlistData: [BasketList] = []
+        var foodName: [String] = []
+        var pieceCount = 0
+        
+        for (index,i) in data.enumerated() {
+            for i in basketlistData {
+                foodName.removeAll()
+                foodName.append(i.yemekAdi!)
+            }
+            
+            switch index {
+            case 0:
+                basketlistData.append(i)
+            default:
+                if data[index].yemekAdi != data[index - 1].yemekAdi && foodName.contains(data[index].yemekAdi ?? "") == false {
+                    basketlistData.append(data[index])
+                }else{
+                    for b in basketlistData {
+                        if data[index].yemekAdi == b.yemekAdi {
+                            pieceCount = 0
+                            pieceCount += Int(data[index].yemekSiparisAdet ?? "") ?? 0
+                            guard let pieceString = b.yemekSiparisAdet else { return }
+                            guard var piece = Int(pieceString) else { return }
+                            piece += pieceCount
+                            for (index, _) in basketlistData.enumerated() {
+                                if basketlistData[index].yemekAdi == b.yemekAdi {
+                                    basketlistData[index].yemekSiparisAdet = String(piece)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        self.badgeCount = 0
+        self.badgeCount = basketlistData.count
+        badgeItem(badgeCount: badgeCount)
     }
 }
 
@@ -115,6 +191,17 @@ extension SepetYemegiListVC: SepetYemegiListViewDelegate {
             print(error)
         case .title(let title):
             self.title = title
+        }
+    }
+    
+    func basketHandleOutPut(_ output: SepetYemegiListBasketPresenterOutPut) {
+        switch output {
+        case .basketList(let basketList):
+            self.basketList = basketList
+            equateBasketItem(data: basketList)
+        case .error(let error):
+            self.basketListError = error
+            badgeItem(badgeCount: 0)
         }
     }
 }

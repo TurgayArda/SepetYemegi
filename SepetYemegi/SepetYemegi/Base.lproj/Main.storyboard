@@ -105,15 +105,8 @@
                             <constraint firstItem="uxB-FP-fhp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jxH-gz-4WV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="pIz-PT-qNq">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="bIA-fk-QYo">
-                            <connections>
-                                <action selector="goToBasket:" destination="BYZ-38-t0r" id="FaZ-Qt-6Rw"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="pIz-PT-qNq"/>
                     <connections>
-                        <outlet property="basketButton" destination="bIA-fk-QYo" id="O4m-7A-6Eb"/>
                         <outlet property="foodCollectionView" destination="GgI-DZ-cZi" id="o5u-h6-zmf"/>
                         <outlet property="foodSearchBar" destination="uxB-FP-fhp" id="5xk-eq-bAb"/>
                         <outlet property="viewCollection" destination="gep-Te-wFW" id="x4X-lv-1cp"/>
@@ -171,32 +164,32 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LLy-xq-GNu" userLabel="ButtonView">
                                 <rect key="frame" x="0.0" y="571" width="414" height="325"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nw9-qQ-M6Y">
-                                        <rect key="frame" x="119.5" y="125" width="175" height="75"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nw9-qQ-M6Y">
+                                        <rect key="frame" x="57" y="125" width="300" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="dma-ZT-5Es"/>
-                                            <constraint firstAttribute="width" constant="175" id="jeu-Bm-cZV"/>
+                                            <constraint firstAttribute="width" constant="300" id="jeu-Bm-cZV"/>
                                         </constraints>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" titleAlignment="automatic">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Add to Basket">
                                                     <attributes>
-                                                        <font key="NSFont" size="21" name="Helvetica"/>
+                                                        <font key="NSFont" metaFont="system" size="22"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
-                                        </buttonConfiguration>
+                                        </state>
                                         <connections>
                                             <action selector="addBasket:" destination="5Pt-rD-BtK" eventType="touchUpInside" id="O09-y9-6lL"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PGg-kY-upU" userLabel="BasketStack">
-                                        <rect key="frame" x="119.5" y="50" width="175" height="50"/>
+                                        <rect key="frame" x="132" y="50" width="150" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bga-F6-jZd">
-                                                <rect key="frame" x="0.0" y="0.0" width="58" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="49.5" height="50"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
                                                 <connections>
@@ -204,13 +197,13 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFK-Ko-y6M">
-                                                <rect key="frame" x="58" y="0.0" width="59.5" height="50"/>
+                                                <rect key="frame" x="49.5" y="0.0" width="51" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEC-eu-s55">
-                                                <rect key="frame" x="117.5" y="0.0" width="57.5" height="50"/>
+                                                <rect key="frame" x="100.5" y="0.0" width="49.5" height="50"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
                                                 <connections>
@@ -220,7 +213,7 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="AfO-J1-FN4"/>
-                                            <constraint firstAttribute="width" constant="175" id="bgc-2r-Mlp"/>
+                                            <constraint firstAttribute="width" constant="150" id="bgc-2r-Mlp"/>
                                             <constraint firstItem="cFK-Ko-y6M" firstAttribute="width" secondItem="PGg-kY-upU" secondAttribute="width" multiplier="0.34" id="fkD-16-MFj"/>
                                             <constraint firstItem="bga-F6-jZd" firstAttribute="width" secondItem="PGg-kY-upU" secondAttribute="width" multiplier="0.33" id="jOj-zc-71V"/>
                                             <constraint firstItem="bga-F6-jZd" firstAttribute="width" secondItem="PGg-kY-upU" secondAttribute="width" multiplier="0.33" id="nQA-ee-KVW"/>

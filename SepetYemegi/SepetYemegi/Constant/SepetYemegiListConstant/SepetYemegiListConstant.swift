@@ -17,6 +17,15 @@ final class SepetYemegiListConstant {
         }
     }
     
+    enum  SepetYemegiListBasketListNetworkURL: String {
+        case path_url = "http://kasimadalan.pe.hu/yemekler/"
+        case type_url = "sepettekiYemekleriGetir.php"
+        
+        static func sepetYemegiListBasketListtPath() -> String {
+            return "\(path_url.rawValue)\(type_url.rawValue)"
+        }
+    }
+    
     enum SepetYemegiListTitle: String {
         case title = "SepetYemegi"
     }

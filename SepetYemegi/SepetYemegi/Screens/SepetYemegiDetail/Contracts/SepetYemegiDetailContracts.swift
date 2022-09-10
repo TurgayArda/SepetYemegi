@@ -19,8 +19,13 @@ enum SepetYemegiDetailInteractorOutPut {
     case foodDetail(FoodList)
 }
 
+enum SepetYemegiDetailDeleteInteractorOutPut {
+    case isBack(Bool)
+}
+
 protocol SepetYemegiDetailInteractorDelegate {
     func handleOutPut(_ output: SepetYemegiDetailInteractorOutPut)
+    func backHandleOutPut(_ output: SepetYemegiDetailDeleteInteractorOutPut)
 }
 
 //MARK: - Presenter
@@ -37,8 +42,13 @@ enum SepetYemegiDetailPresenterOutPut {
     case title(String)
 }
 
+enum SepetYemegiDetailDeletePresenterOutPut {
+    case isBack(Bool)
+}
+
 //MARK: - View
 
 protocol SepetYemegiDetailViewDelegate {
     func handleOutPut(_ output: SepetYemegiDetailPresenterOutPut)
+    func backHandleOutPut(_ output: SepetYemegiDetailDeletePresenterOutPut)
 }

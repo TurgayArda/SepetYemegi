@@ -27,19 +27,26 @@ extension SepetYemegiBasketPresenter {
 }
 
 extension SepetYemegiBasketPresenter {
-    func allDeletePresenter(itemID: Int) {
-        interactor?.allDeleteInteractor(itemID: itemID)
+    func deleteDataPresenter(itemID: Int, isAllData: Bool, isDeleteItem: Bool) {
+        interactor?.deleteDataInteractor(itemID: itemID, isAllData: isAllData, isDeleteItem: isDeleteItem)
     }
 }
 
 extension SepetYemegiBasketPresenter: SepetYemegiBasketInteractorDelegate {
     func handleOutPut(_ output: SepetYemegiBasketInteractorOutPut) {
-        view?.handleOutPut(.title("Basket"))
+        view?.handleOutPut(.title(SepetYemegiBasketConstant.SepetYemegiBasketListConstant.title.rawValue))
         switch output {
         case .basketList(let basketList):
             view?.handleOutPut(.basketList(basketList))
         case .error(let error):
             view?.handleOutPut(.error(error))
+        }
+    }
+    
+    func listBackHandleOutPut(_ output: SepetYemegiBasketBackListInteractorOutPut) {
+        switch output {
+        case .isBack(let isBack):
+            view?.listBackHandleOutPut(.isBack(isBack))
         }
     }
 }

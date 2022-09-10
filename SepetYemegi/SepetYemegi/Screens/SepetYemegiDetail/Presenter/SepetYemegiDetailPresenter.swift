@@ -21,6 +21,8 @@ class  SepetYemegiDetailPresenter:  SepetYemegiDetailPresenterProtocol {
     }
 }
 
+//MARK: - SepetYemegiDetailPresenterProtocol
+
 extension SepetYemegiDetailPresenter {
     func load() {
         interactor?.load()
@@ -31,7 +33,7 @@ extension SepetYemegiDetailPresenter {
     }
 }
 
-//MARK: - ToDosDetailInteractorDelegate
+//MARK: - SepetYemegiDetailInteractorDelegate
 
 extension SepetYemegiDetailPresenter:  SepetYemegiDetailInteractorDelegate {
     func handleOutPut(_ output: SepetYemegiDetailInteractorOutPut) {
@@ -40,6 +42,13 @@ extension SepetYemegiDetailPresenter:  SepetYemegiDetailInteractorDelegate {
             self.foodDetail = foodDetail
             view?.handleOutPut(.title(foodDetail.yemekAdi ?? ""))
             view?.handleOutPut(.foodDetail(foodDetail))
+        }
+    }
+    
+    func backHandleOutPut(_ output: SepetYemegiDetailDeleteInteractorOutPut) {
+        switch output {
+        case .isBack(let isBack):
+            view?.backHandleOutPut(.isBack(isBack))
         }
     }
 }

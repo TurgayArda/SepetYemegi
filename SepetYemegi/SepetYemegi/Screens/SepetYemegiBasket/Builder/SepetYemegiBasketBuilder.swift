@@ -11,11 +11,9 @@ final class SepetYemegiBasketBuilder {
     static func make() -> SepetYemegiBasketVC {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let view = storyboard.instantiateViewController(withIdentifier: "SepetYemegiBasket") as! SepetYemegiBasketVC
-        let interactor = SepetYemegiBasketInteractor(service: SepetYemegiService(), deleteService: GameListService())
+        let interactor = SepetYemegiBasketInteractor(service: SepetYemegiService())
         let presenter = SepetYemegiBasketPresenter(interactor: interactor, view: view)
-        //let router = SepetYemegiBasketRouter(view: view)
         view.presenter = presenter
-        //view.router = router
         return view
     }
 }

@@ -24,6 +24,10 @@ extension SepetYemegiListPresenter {
     func load() {
         interactor?.load()
     }
+    
+    func loadBasket() {
+        interactor?.loadBasket()
+    }
 }
 
 extension SepetYemegiListPresenter: SepetYemegiListInteractorDelegate {
@@ -34,6 +38,15 @@ extension SepetYemegiListPresenter: SepetYemegiListInteractorDelegate {
             view?.handleOutPut(.foodList(foodList))
         case .error(let error):
             view?.handleOutPut(.error(error))
+        }
+    }
+    
+    func basketHandleOutPut(_ output: SepetYemegiListBasketInteractorOutPut) {
+        switch output {
+        case .basketList(let basketList):
+            view?.basketHandleOutPut(.basketList(basketList))
+        case .error(let error):
+            view?.basketHandleOutPut(.error(error))
         }
     }
 }

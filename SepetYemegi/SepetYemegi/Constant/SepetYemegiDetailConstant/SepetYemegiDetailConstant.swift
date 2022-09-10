@@ -8,6 +8,15 @@
 import Foundation
 
 final class SepetYemegiDetailConstant {
+    enum  SepetYemegiDetailNetworkURL: String {
+        case path_url = "http://kasimadalan.pe.hu/yemekler/"
+        case food_url = "sepeteYemekEkle.php"
+        
+        static func sepetYemegiDetailPath() -> String {
+            return "\(path_url.rawValue)\(food_url.rawValue)"
+        }
+    }
+    
     enum SepetYemegiDetailImageURL: String {
         case path_url =  "http://kasimadalan.pe.hu/yemekler/"
         case type_url = "resimler/"

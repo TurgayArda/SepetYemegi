@@ -12,6 +12,7 @@ import UIKit
 protocol SepetYemegiListInteractorProtocol {
     var delegate: SepetYemegiListInteractorDelegate? { get set }
     func load()
+    func loadBasket()
 }
 
 enum SepetYemegiListInteractorOutPut {
@@ -19,14 +20,22 @@ enum SepetYemegiListInteractorOutPut {
     case error(String)
 }
 
+enum SepetYemegiListBasketInteractorOutPut {
+    case basketList([BasketList])
+    case error(String)
+}
+
+
 protocol SepetYemegiListInteractorDelegate {
     func handleOutPut(_ output: SepetYemegiListInteractorOutPut)
+    func basketHandleOutPut(_ output: SepetYemegiListBasketInteractorOutPut)
 }
 
 //MARK: - Presenter
 
 protocol SepetYemegiListPresenterProtocol: AnyObject {
     func load()
+    func loadBasket()
 }
 
 enum SepetYemegiListPresenterOutPut {
@@ -35,10 +44,16 @@ enum SepetYemegiListPresenterOutPut {
     case title(String)
 }
 
+enum SepetYemegiListBasketPresenterOutPut {
+    case basketList([BasketList])
+    case error(String)
+}
+
 //MARK: - View
 
 protocol SepetYemegiListViewDelegate {
     func handleOutPut(_ output: SepetYemegiListPresenterOutPut)
+    func basketHandleOutPut(_ output: SepetYemegiListBasketPresenterOutPut)
 }
 
 //MARK: - CollectionViewProvider

@@ -10,6 +10,7 @@ import UIKit
 class SepetYemegiBasketVC: UIViewController {
     
     //MARK: - Views
+    
     @IBOutlet weak var foodBasketTableView: UITableView!
     @IBOutlet weak var resultView: UIView!
     @IBOutlet weak var resultStackView: UIStackView!
@@ -24,14 +25,18 @@ class SepetYemegiBasketVC: UIViewController {
     private var basketlistData: [BasketList] = []
     
     var presenter: SepetYemegiBasketPresenterProtocol?
-
+    
+    //MARK: Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-      
+        
+        
         initDelegate()
         presenter?.load()
     }
+    
+    //MARK: Private func
     
     private func initDelegate() {
         foodBasketProvider.delegate = self
@@ -44,10 +49,11 @@ class SepetYemegiBasketVC: UIViewController {
     private func configure() {
         view.backgroundColor = colorView
         navigationController?.navigationBar.tintColor = UIColor.white
-    
-        resultButton.setTitle("Continue", for: .normal)
+        
+        resultButton.setTitle(SepetYemegiBasketConstant.SepetYemegiBasketListConstant.resultButton.rawValue, for: .normal)
         resultButton.setTitleColor(.white, for: .normal)
         resultLabel.textColor = colorView
+        resultLabel.text = "0"
         
         let rightButton = UIBarButtonItem(title: "", style: .plain , target: self, action: #selector(allBasketItem(_:)))
         let buttonIcon = UIImage(systemName: "trash")
@@ -81,14 +87,14 @@ class SepetYemegiBasketVC: UIViewController {
     }
     
     @objc func allBasketItem(_ navigationItem: UIBarButtonItem) {
-        for i in allBasketItem {
+        for (index,i) in allBasketItem.enumerated() {
             guard let id = Int(i.yemekID ?? "") else { return }
-            presenter?.allDeletePresenter(itemID: id)
+            if index == (allBasketItem.count) - 1 {
+                presenter?.deleteDataPresenter(itemID: id, isAllData: true, isDeleteItem: false)
+            }else{
+                presenter?.deleteDataPresenter(itemID: id, isAllData: false, isDeleteItem: false)
+            }
         }
-        
-        self.basketlistData.removeAll()
-        foodBasketProvider.load(value: basketlistData)
-        self.foodBasketTableView.reloadData()
     }
     
     @IBAction func resultAction(_ sender: Any) {
@@ -99,12 +105,9 @@ class SepetYemegiBasketVC: UIViewController {
         var foodName: [String] = []
         var pieceCount = 0
         basketlistData.removeAll()
-     
-       
         
         for (index,i) in data.enumerated() {
             for i in basketlistData {
-                foodName.removeAll()
                 foodName.append(i.yemekAdi!)
             }
             
@@ -132,12 +135,13 @@ class SepetYemegiBasketVC: UIViewController {
                 }
             }
         }
+        
         totalResult()
-        foodBasketProvider.removeAll()
         foodBasketProvider.load(value: basketlistData)
-        //self.foodBasketTableView.reloadData()
     }
 }
+
+//MARK: - SepetYemegiBasketViewDelegate
 
 extension SepetYemegiBasketVC:  SepetYemegiBasketViewDelegate {
     func handleOutPut(_ output: SepetYemegiBasketPresenterOutPut) {
@@ -155,7 +159,18 @@ extension SepetYemegiBasketVC:  SepetYemegiBasketViewDelegate {
             self.title = title
         }
     }
+    
+    func listBackHandleOutPut(_ output: SepetYemegiBasketBackListPresenterOutPut) {
+        switch output {
+        case .isBack(let isBack):
+            if isBack {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
+    }
 }
+
+//MARK: - SepetYemegiBasketProviderDelegate
 
 extension SepetYemegiBasketVC: SepetYemegiBasketProviderDelegate {
     func selected(at select: BasketList) {
@@ -164,19 +179,15 @@ extension SepetYemegiBasketVC: SepetYemegiBasketProviderDelegate {
     
     func deleteBasketItem(data: BasketList) {
         guard let id = Int(data.yemekID ?? "") else {return }
-        presenter?.allDeletePresenter(itemID: id)
         
         if basketlistData.count <= 1 {
+            presenter?.deleteDataPresenter(itemID: id, isAllData: true, isDeleteItem: false)
             self.basketlistData.removeAll()
             foodBasketProvider.load(value: basketlistData)
             resultLabel.text = "0"
             self.foodBasketTableView.reloadData()
         }else{
-//            foodBasketProvider.removeAll()
-           // presenter?.load()
-            //foodBasketTableView.reloadData()
+            presenter?.deleteDataPresenter(itemID: id, isAllData: false, isDeleteItem: true)
         }
-        //foodBasketTableView.reloadData()
     }
-    
 }

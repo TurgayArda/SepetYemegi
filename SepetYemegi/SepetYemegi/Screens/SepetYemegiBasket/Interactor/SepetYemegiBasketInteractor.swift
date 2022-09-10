@@ -11,20 +11,20 @@ import Alamofire
 class SepetYemegiBasketInteractor:  SepetYemegiBasketInteractorProtocol {
     var delegate: SepetYemegiBasketInteractorDelegate?
     let service: SepetYemegiServiceProtocol?
-    let deleteService: GameListServiceProtocol?
     let userName = "turgayarda"
     
-    init(service: SepetYemegiServiceProtocol, deleteService: GameListServiceProtocol) {
+    init(service: SepetYemegiServiceProtocol) {
         self.service = service
-        self.deleteService = deleteService
     }
 }
+
+//MARK: - SepetYemegiBasketInteractorProtocol
 
 extension  SepetYemegiBasketInteractor {
     func load() {
         let params: Parameters = ["kullanici_adi": userName]
         
-        service?.fetch(url: "http://kasimadalan.pe.hu/yemekler/sepettekiYemekleriGetir.php",
+        service?.fetch(url: SepetYemegiBasketConstant.SepetYemegiBasketListNetworkURL.sepetYemegiBasketListPath(),
                        parameters: params,
                        completion: { [delegate] (result: Result<BasketListResult, Error>) in
             switch result {
@@ -40,13 +40,22 @@ extension  SepetYemegiBasketInteractor {
 }
 
 extension  SepetYemegiBasketInteractor {
-    func allDeleteInteractor(itemID: Int) {
-        let params: Parameters = ["sepet_yemek_id": itemID, "kullanici_adi": userName]
-        //deleteService?.fetchAllData(url: "http://kasimadalan.pe.hu/yemekler/sepettenYemekSil.php", parameters: params)
-        service?.fetch(url: "http://kasimadalan.pe.hu/yemekler/sepettenYemekSil.php",
+    func deleteDataInteractor(itemID: Int, isAllData: Bool, isDeleteItem: Bool) {
+        let params: Parameters = ["sepet_yemek_id": itemID,
+                                  "kullanici_adi": userName
+        ]
+        
+        service?.fetch(url: SepetYemegiBasketConstant.SepetYemegiBasketDeleteNetworkURL.sepetYemegiBasketDeletePath(),
                        parameters: params,
-                       completion: { (result: Result<BasketList, Error>) in
-            self.load()
+                       completion: { [delegate] (result: Result<BasketList, Error>) in
+            
+            if isAllData {
+                delegate?.listBackHandleOutPut(.isBack(true))
+            }
+            
+            if isDeleteItem {
+                self.load()
+            }
         })
     }
 }

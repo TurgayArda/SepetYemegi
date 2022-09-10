@@ -12,7 +12,7 @@ import UIKit
 protocol SepetYemegiBasketInteractorProtocol {
     var delegate: SepetYemegiBasketInteractorDelegate? { get set }
     func load()
-    func allDeleteInteractor(itemID: Int)
+    func deleteDataInteractor(itemID: Int, isAllData: Bool, isDeleteItem: Bool)
 }
 
 enum SepetYemegiBasketInteractorOutPut {
@@ -20,15 +20,20 @@ enum SepetYemegiBasketInteractorOutPut {
     case error(String)
 }
 
+enum SepetYemegiBasketBackListInteractorOutPut {
+    case isBack(Bool)
+}
+
 protocol SepetYemegiBasketInteractorDelegate {
     func handleOutPut(_ output: SepetYemegiBasketInteractorOutPut)
+    func listBackHandleOutPut(_ output: SepetYemegiBasketBackListInteractorOutPut)
 }
 
 //MARK: - Presenter
 
 protocol SepetYemegiBasketPresenterProtocol: AnyObject {
     func load()
-    func allDeletePresenter(itemID: Int)
+    func deleteDataPresenter(itemID: Int, isAllData: Bool, isDeleteItem: Bool)
 }
 
 enum SepetYemegiBasketPresenterOutPut {
@@ -37,10 +42,16 @@ enum SepetYemegiBasketPresenterOutPut {
     case title(String)
 }
 
+enum SepetYemegiBasketBackListPresenterOutPut {
+    case isBack(Bool)
+}
+
+
 //MARK: - View
 
 protocol SepetYemegiBasketViewDelegate {
     func handleOutPut(_ output: SepetYemegiBasketPresenterOutPut)
+    func listBackHandleOutPut(_ output: SepetYemegiBasketBackListPresenterOutPut)
 }
 
 //MARK: - CollectionViewProvider

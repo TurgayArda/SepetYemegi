@@ -10,6 +10,7 @@ import UIKit
 class SepetYemegiListProvider: NSObject {
     
     var delegate: SepetYemegiListProviderDelegate?
+    let sepetListCellID = "Cell"
     var foodListData: [FoodList] = []
     var foodListSearchData: [FoodList] = []
     var isSearch = false
@@ -43,7 +44,7 @@ extension SepetYemegiListProvider: UICollectionViewDataSource, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? SepetYemegiListCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: sepetListCellID, for: indexPath) as? SepetYemegiListCollectionViewCell else {
             return UICollectionViewCell()
         }
         

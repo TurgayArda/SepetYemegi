@@ -5,7 +5,6 @@
 //  Created by Arda Sisli on 5.09.2022.
 //
 
-import Foundation
 import UIKit
 
 final class SepetYemegiListBuilder {

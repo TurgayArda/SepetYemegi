@@ -20,12 +20,12 @@ class SepetYemegiBasketTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-       configure()
+        configure()
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
     }
     
     private func configure() {
@@ -38,12 +38,12 @@ class SepetYemegiBasketTableViewCell: UITableViewCell {
         foodName.text = cellViewModel?.getFoodBasketName(food: food)
         foodPrice.text = cellViewModel?.getFoodBasketPrice(food: food)
         pieceLabel.text = cellViewModel?.getFoodBasketPiece(food: food)
-       
+        
         if let imageName = food.yemekResimAdi {
             if let url = URL(string: SepetYemegiListConstant.imageURL.foodListImageURL(imageName: imageName)){
                 foodImage.af.setImage(withURL: url)
+            }
         }
-    }
     }
     
     func savemodel(data: BasketList) {

@@ -33,13 +33,15 @@ class SepetYemegiDetailVC: UIViewController {
     var presenter: SepetYemegiDetailPresenterProtocol?
     
     //MARK: Life Cycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         configure()
         presenter?.load()
     }
+    
+    //MARK: Private func
     
     private func configure() {
         view.backgroundColor = colorView
@@ -55,6 +57,7 @@ class SepetYemegiDetailVC: UIViewController {
         let changeMinusImage = minusImage?.withTintColor(colorView, renderingMode: .alwaysOriginal)
         minusButon.setImage(changeMinusImage, for: .normal)
         
+        addBasket.backgroundColor = colorView
         
         propertyLayer()
     }
@@ -73,9 +76,9 @@ class SepetYemegiDetailVC: UIViewController {
         plusButton.layer.cornerRadius = 8
         plusButton.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner]
         
-        foodImage.layer.borderWidth = 0.3
-        foodImage.layer.borderColor = UIColor.gray.cgColor
-        foodImage.layer.cornerRadius = 16
+        //        foodImage.layer.borderWidth = 0.3
+        //        foodImage.layer.borderColor = UIColor.gray.cgColor
+        //        foodImage.layer.cornerRadius = 16
         
         addBasket.layer.borderWidth = 0.3
         addBasket.layer.borderColor = UIColor.gray.cgColor
@@ -85,7 +88,6 @@ class SepetYemegiDetailVC: UIViewController {
     @IBAction func addBasket(_ sender: Any) {
         guard  let detail = foodDetail else { return }
         presenter?.addBasketPresenter(food: detail, pieceCount: pieceCount, userName: userName)
-        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func deleteButton(_ sender: Any) {
@@ -109,7 +111,7 @@ class SepetYemegiDetailVC: UIViewController {
         
         if let imageName = foodDetail.yemekResimAdi {
             if let url = URL(string: SepetYemegiDetailConstant.SepetYemegiDetailImageURL.foodDetailImageURL(imageName: imageName)) {
-            foodImage.af.setImage(withURL: url)
+                foodImage.af.setImage(withURL: url)
             }
         }
     }
@@ -125,6 +127,15 @@ extension SepetYemegiDetailVC:  SepetYemegiDetailViewDelegate {
             propertyUI(foodDetail: foodDetail)
         case .title(let title):
             self.title = title
+        }
+    }
+    
+    func backHandleOutPut(_ output: SepetYemegiDetailDeletePresenterOutPut) {
+        switch output {
+        case .isBack(let isBack):
+            if isBack == true {
+                self.navigationController?.popViewController(animated: true)
+            }
         }
     }
 }
