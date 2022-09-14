@@ -24,6 +24,9 @@
 		CB4EABC028C7B87800472A33 /* SepetYemegiDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4EABBF28C7B87800472A33 /* SepetYemegiDetailInteractor.swift */; };
 		CB4EABC228C7B88100472A33 /* SepetYemegiDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4EABC128C7B88100472A33 /* SepetYemegiDetailPresenter.swift */; };
 		CB4EABC428C7B89A00472A33 /* SepetYemegiDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4EABC328C7B89A00472A33 /* SepetYemegiDetailVC.swift */; };
+		CB591EA328D1E45600FDEBE4 /* food.json in Resources */ = {isa = PBXBuildFile; fileRef = CB591EA228D1E45600FDEBE4 /* food.json */; };
+		CB7D570228D1ECD2001522F5 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = CB7D570128D1ECD2001522F5 /* Lottie */; };
+		CB7D570528D1ECF3001522F5 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7D570428D1ECF3001522F5 /* SplashVC.swift */; };
 		CB9F4F5628C5FDD800FEA143 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F4F5528C5FDD800FEA143 /* AppDelegate.swift */; };
 		CB9F4F5828C5FDD800FEA143 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F4F5728C5FDD800FEA143 /* SceneDelegate.swift */; };
 		CB9F4F5D28C5FDD800FEA143 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB9F4F5B28C5FDD800FEA143 /* Main.storyboard */; };
@@ -65,6 +68,8 @@
 		CB4EABBF28C7B87800472A33 /* SepetYemegiDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiDetailInteractor.swift; sourceTree = "<group>"; };
 		CB4EABC128C7B88100472A33 /* SepetYemegiDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiDetailPresenter.swift; sourceTree = "<group>"; };
 		CB4EABC328C7B89A00472A33 /* SepetYemegiDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiDetailVC.swift; sourceTree = "<group>"; };
+		CB591EA228D1E45600FDEBE4 /* food.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = food.json; sourceTree = "<group>"; };
+		CB7D570428D1ECF3001522F5 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		CB9F4F5228C5FDD800FEA143 /* SepetYemegi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SepetYemegi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB9F4F5528C5FDD800FEA143 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB9F4F5728C5FDD800FEA143 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +100,7 @@
 			files = (
 				CB9F4F8D28C65BFB00FEA143 /* Alamofire in Frameworks */,
 				CB9F4F9028C65C1000FEA143 /* AlamofireImage in Frameworks */,
+				CB7D570228D1ECD2001522F5 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +201,14 @@
 			path = SepetYemegiDetail;
 			sourceTree = "<group>";
 		};
+		CB7D570328D1ECE0001522F5 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				CB7D570428D1ECF3001522F5 /* SplashVC.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		CB9F4F4928C5FDD800FEA143 = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +251,7 @@
 		CB9F4F6A28C6042500FEA143 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CB591EA228D1E45600FDEBE4 /* food.json */,
 				CB9F4F5E28C5FDDE00FEA143 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -254,6 +269,7 @@
 		CB9F4F6C28C6047200FEA143 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				CB7D570328D1ECE0001522F5 /* Splash */,
 				CB181B2928CA2FC200F3DAB4 /* SepetYemegiBasket */,
 				CB4EABBA28C7B70400472A33 /* SepetYemegiDetail */,
 				CB9F4F6D28C6048F00FEA143 /* SepetYemegiList */,
@@ -476,6 +492,7 @@
 			packageProductDependencies = (
 				CB9F4F8C28C65BFB00FEA143 /* Alamofire */,
 				CB9F4F8F28C65C1000FEA143 /* AlamofireImage */,
+				CB7D570128D1ECD2001522F5 /* Lottie */,
 			);
 			productName = SepetYemegi;
 			productReference = CB9F4F5228C5FDD800FEA143 /* SepetYemegi.app */;
@@ -508,6 +525,7 @@
 			packageReferences = (
 				CB9F4F8B28C65BFB00FEA143 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				CB9F4F8E28C65C1000FEA143 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+				CB7D570028D1ECD2001522F5 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = CB9F4F5328C5FDD800FEA143 /* Products */;
 			projectDirPath = "";
@@ -524,6 +542,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB9F4F6228C5FDDE00FEA143 /* LaunchScreen.storyboard in Resources */,
+				CB591EA328D1E45600FDEBE4 /* food.json in Resources */,
 				CB9F4F5F28C5FDDE00FEA143 /* Assets.xcassets in Resources */,
 				CB9F4F5D28C5FDD800FEA143 /* Main.storyboard in Resources */,
 			);
@@ -565,6 +584,7 @@
 				CB181B3F28CA329700F3DAB4 /* SepetYemegiBasketTableViewCell.swift in Sources */,
 				CB9F4F7728C604EE00FEA143 /* SepetYemegiListRouter.swift in Sources */,
 				CB9F4F5828C5FDD800FEA143 /* SceneDelegate.swift in Sources */,
+				CB7D570528D1ECF3001522F5 /* SplashVC.swift in Sources */,
 				CB181B2F28CA300300F3DAB4 /* SepetYemegiBasketPresenter.swift in Sources */,
 				CB9F4F8A28C6441E00FEA143 /* SepetYemegiListModel.swift in Sources */,
 				CB4EABC028C7B87800472A33 /* SepetYemegiDetailInteractor.swift in Sources */,
@@ -786,6 +806,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CB7D570028D1ECD2001522F5 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		CB9F4F8B28C65BFB00FEA143 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -805,6 +833,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CB7D570128D1ECD2001522F5 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB7D570028D1ECD2001522F5 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		CB9F4F8C28C65BFB00FEA143 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CB9F4F8B28C65BFB00FEA143 /* XCRemoteSwiftPackageReference "Alamofire" */;

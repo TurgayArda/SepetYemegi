@@ -38,7 +38,6 @@ class SepetYemegiListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        SepetYemegiListBuilder.make(view: self)
         initDelegate()
         presenter?.load()
         presenter?.loadBasket()

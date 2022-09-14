@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cTh-Ga-Zhn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dzB-Jo-tNy">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="uxB-FP-fhp">
-                                <rect key="frame" x="0.0" y="88" width="414" height="51"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
@@ -26,10 +26,10 @@
                                 </scopeButtonTitles>
                             </searchBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gep-Te-wFW" userLabel="ScreenView">
-                                <rect key="frame" x="0.0" y="139" width="414" height="757"/>
+                                <rect key="frame" x="0.0" y="95" width="414" height="801"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GgI-DZ-cZi">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="757"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="801"/>
                                         <color key="backgroundColor" red="0.97953442883009867" green="0.97953442883009867" blue="0.97953442883009867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="a4l-s5-6H5">
                                             <size key="itemSize" width="166" height="299"/>
@@ -114,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="939.13043478260875" y="65.625"/>
+            <point key="canvasLocation" x="-32" y="52"/>
         </scene>
         <!--Sepet Yemegi DetailVC-->
         <scene sceneID="VlW-TT-Unp">
@@ -261,7 +261,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bra-RL-RqG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1803" y="66"/>
+            <point key="canvasLocation" x="835" y="52"/>
         </scene>
         <!--Sepet Yemegi BasketVC-->
         <scene sceneID="Vnn-OJ-uLc">
@@ -409,25 +409,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mLk-aU-0Fs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2634.7826086956525" y="71.651785714285708"/>
+            <point key="canvasLocation" x="1761" y="52"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="sC4-FP-s9U">
+        <!--SplashVC-->
+        <scene sceneID="pSc-f1-xcr">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cTh-Ga-Zhn" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WgY-dk-t0F">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
+                <viewController id="dzB-Jo-tNy" customClass="SplashVC" customModule="SepetYemegi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dAp-bL-e6f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fi0-cG-TT7" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="47" y="173" width="320" height="550"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="550" id="Hxz-0c-hMF"/>
+                                    <constraint firstAttribute="width" constant="320" id="eMW-7L-mZf"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="food"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KKj-Jr-vy7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fi0-cG-TT7" firstAttribute="centerY" secondItem="dAp-bL-e6f" secondAttribute="centerY" id="GZy-2P-GYj"/>
+                            <constraint firstItem="fi0-cG-TT7" firstAttribute="centerX" secondItem="dAp-bL-e6f" secondAttribute="centerX" id="IjG-TW-IRk"/>
+                        </constraints>
+                    </view>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="005-N4-hLD"/>
+                        <outlet property="animationView" destination="fi0-cG-TT7" id="MTq-m2-4vQ"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="32A-VC-fup" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XQX-Oy-8Nm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28.985507246376812" y="65.625"/>
+            <point key="canvasLocation" x="-901" y="52"/>
         </scene>
     </scenes>
     <resources>
